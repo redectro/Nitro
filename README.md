@@ -26,6 +26,7 @@
 * CPAN
 * YAML
 * Test
+* Log::Log4perl
 * Method::Signatures
 * Module::Find
 * XML::Bare
