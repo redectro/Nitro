@@ -259,7 +259,7 @@ method buildPenguinString() {
 			$self->{penguin}->{clothing}->{photo},
 			$self->{penguin}->{room}->{xpos},
 			$self->{penguin}->{room}->{ypos},
-			$self->{penguin}->{room}->{frame},
+			$self->{penguin}->{room}->{frame}, 1,
 			($self->{penguin}->{ranking}->{rank} * 146)
 		);
 		my $strPenguinInfo = join('|', @arrInfo);
