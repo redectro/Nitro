@@ -161,7 +161,7 @@ method handleAdoptPuffle($strData, $objClient) {
 		my $intPuffID = $arrData[5];
 		my $strPuffName = $arrData[6];
 		return if (!looks_like_number($intPuffID));
-		return if ($strPuffName !~ /^[[:alnum:]]+$/);
+		return if ($strPuffName !~ /[\w ]+/);
 		if ($objClient->{penguin}->{wallet} < 800) {
 		   return $objClient->sendError(401);
 		}
