@@ -266,6 +266,7 @@ method buildPenguinString() {
 		return $strPenguinInfo;
 }
 
+
 method joinRoom($intRoom = 100, $intX = 0, $intY = 0) {
 		return if (!looks_like_number($intRoom));
 		return if (!looks_like_number($intX));
@@ -274,6 +275,7 @@ method joinRoom($intRoom = 100, $intX = 0, $intY = 0) {
 		$self->{penguin}->{room}->{frame} = 0;
 		if (exists($self->{parent}->{crumbs}->{game_room_crumbs}->{$intRoom})) {  
 			$self->{penguin}->{room}->{id} = $intRoom;
+			$self->sendRoom('%xt%ap%-1%' . $self->buildPenguinString . '%');
 			return $self->sendXT(['jg', '-1', $intRoom]);
 		} elsif (exists($self->{parent}->{crumbs}->{room_crumbs}->{$intRoom}) || $intRoom > 1000) {
 			$self->{penguin}->{room}->{id} = $intRoom;
