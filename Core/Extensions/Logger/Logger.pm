@@ -6,7 +6,7 @@ use warnings;
 use Method::Signatures;
 use feature qw(say);
 use Cwd;
-use Win32::Console::ANSI;
+use if $^O eq 'MSWin32', "Win32::Console::ANSI";
 use Term::ANSIColor;
 
 method new() {
