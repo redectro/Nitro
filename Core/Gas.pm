@@ -131,7 +131,7 @@ method handleLoadPenguinInfo($arrInfo) {
 	   while (my ($strKey, $mixValue) = each(%{$arrInfo})) {
 				switch ($strKey) {
 					case ('joindate') {
-						$self->{joindate} = round((time - str2time($mixValue)) / 86400);
+						$self->{penguin}->{joindate} = round((time - str2time($mixValue)) / 86400);
 					}
 					case ('clothing') {
 						if ($mixValue ne '') {
