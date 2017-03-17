@@ -51,7 +51,7 @@
 * Bytes::Random::Secure
 * Digest::MD5
 * Term::ANSIColor
-* (Only for Windows) Win32::Console::ANSI
+* **(Only for Windows)** Win32::Console::ANSI
 * List::Util
 * HTML::Entities
 * List::MoreUtils
